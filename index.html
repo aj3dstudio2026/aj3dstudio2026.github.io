@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AJ3D STUDIO 2026. Diseño e impresión 3D personalizada en Menorca. Creamos objetos únicos, piezas a medida y soluciones para negocios.">
+  <meta name="theme-color" content="#101820">
+  <title>AJ3D STUDIO 2026 | Diseño e impresión 3D en Menorca</title>
+  <style>
+    :root {
+      --ink:#101820; --ink2:#172630; --paper:#f4f5f2; --white:#fff;
+      --muted:#aab7bd; --lime:#c8f169; --line:rgba(255,255,255,.13);
+      --radius:22px; --max:1160px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--ink);color:var(--white);line-height:1.55}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .brand{font-weight:900;letter-spacing:.06em;font-size:1.05rem}
+    .brand span{color:var(--lime)}
+    .navlinks{display:flex;gap:27px;color:#d3dce0;font-size:.9rem}
+    .navlinks a:hover{color:var(--lime)}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:12px 19px;font-weight:800;font-size:.9rem}
+    .nav-cta,.btn.primary{background:var(--lime);color:var(--ink)}
+    .btn.secondary{border:1px solid rgba(255,255,255,.35);color:white}
+    .hero{padding:88px 0 76px;display:grid;grid-template-columns:1.08fr .92fr;gap:50px;align-items:center}
+    .eyebrow{color:var(--lime);font-size:.78rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase}
+    h1{font-size:clamp(3.1rem,7vw,6.5rem);line-height:.94;letter-spacing:-.065em;margin:20px 0 24px}
+    h1 em{font-style:normal;color:var(--lime)}
+    .lead{font-size:1.13rem;color:#c2cdd1;max-width:590px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .hero-note{margin-top:30px;color:var(--muted);font-size:.83rem}
+    .visual{min-height:440px;border-radius:30px;background:radial-gradient(circle at 50% 42%,#3a5962 0,#1b3039 37%,#13232c 72%);position:relative;overflow:hidden;display:grid;place-items:center;border:1px solid var(--line)}
+    .visual:before,.visual:after{content:"";position:absolute;border:1px solid rgba(200,241,105,.25);border-radius:50%;width:340px;height:340px}
+    .visual:after{width:440px;height:440px}
+    .cube{width:190px;height:190px;position:relative;transform:rotate(-30deg) skew(2deg);filter:drop-shadow(18px 28px 18px rgba(0,0,0,.35))}
+    .cube .top{position:absolute;left:0;top:0;width:100%;height:100%;background:linear-gradient(135deg,#e9ffb9,#a6d84c);clip-path:polygon(50% 0,100% 25%,50% 50%,0 25%)}
+    .cube .left{position:absolute;left:0;top:25%;width:50%;height:75%;background:linear-gradient(135deg,#a6d84c,#587b2d);clip-path:polygon(0 0,100% 33.3%,100% 100%,0 66.7%)}
+    .cube .right{position:absolute;right:0;top:25%;width:50%;height:75%;background:linear-gradient(145deg,#d1f77c,#8ebc3b);clip-path:polygon(0 33.3%,100% 0,100% 66.7%,0 100%)}
+    .visual-label{position:absolute;bottom:25px;left:27px;color:#d7e1e3;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase}
+    .section{padding:82px 0}
+    .section.light{background:var(--paper);color:var(--ink)}
+    .section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:35px}
+    h2{font-size:clamp(2rem,4vw,3.3rem);letter-spacing:-.045em;line-height:1.05;margin:10px 0}
+    .section-head p{max-width:440px;color:#627078;margin:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{border:1px solid #dce1dc;border-radius:var(--radius);padding:25px;background:#fff;min-height:230px}
+    .num{font-size:.78rem;color:#78858b;font-weight:900;letter-spacing:.12em}
+    .icon{width:48px;height:48px;border-radius:14px;background:#eaf5d8;color:#29401b;display:grid;place-items:center;font-size:1.35rem;margin:22px 0 17px}
+    .card h3{font-size:1.2rem;margin:0 0 8px}
+    .card p{color:#657178;font-size:.93rem;margin:0}
+    .product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .product{border:1px solid var(--line);border-radius:18px;padding:20px;background:rgba(255,255,255,.035)}
+    .product-art{height:140px;border-radius:13px;background:linear-gradient(145deg,#29434c,#172a33);display:grid;place-items:center;font-size:3rem;margin-bottom:17px}
+    .product h3{margin:0 0 6px;font-size:1.05rem}
+    .product p{margin:0;color:var(--muted);font-size:.87rem}
+    .band{padding:70px 0;background:var(--lime);color:var(--ink)}
+    .band-inner{display:flex;justify-content:space-between;align-items:center;gap:25px}
+    .band h2{max-width:700px;margin:0}
+    .band .btn{background:var(--ink);color:white;white-space:nowrap}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .step{border-top:1px solid var(--line);padding-top:18px}
+    .step b{color:var(--lime);font-size:.8rem;letter-spacing:.12em}
+    .step h3{margin:12px 0 6px}
+    .step p{margin:0;color:var(--muted);font-size:.9rem}
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+    .contact-box{background:var(--ink2);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+    .contact-box p{color:#c0cbd0}
+    .contact-list{display:grid;gap:12px;margin-top:22px}
+    .contact-item{padding:14px 16px;border:1px solid var(--line);border-radius:13px;color:#d8e1e4}
+    .contact-item strong{display:block;color:var(--lime);font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:3px}
+    footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.83rem}
+    .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:850px){.hero{grid-template-columns:1fr;padding:65px 0}.visual{min-height:330px}.cards{grid-template-columns:1fr 1fr}.product-grid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.contact{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:14px}}
+    @media(max-width:580px){.wrap{width:min(100% - 30px,var(--max))}.nav{height:68px}.navlinks{display:none}.nav-cta{padding:10px 14px;font-size:.8rem}.hero{padding:55px 0}.visual{min-height:280px}.cube{transform:scale(.78) rotate(-30deg) skew(2deg)}.section{padding:62px 0}.cards,.product-grid,.steps{grid-template-columns:1fr}.band-inner{display:block}.band .btn{margin-top:22px}.product-art{height:125px}}
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <nav class="nav">
+      <a class="brand" href="#inicio">AJ3D <span>STUDIO</span> 2026</a>
+      <div class="navlinks">
+        <a href="#servicios">Servicios</a><a href="#productos">Productos</a><a href="#proceso">Cómo trabajamos</a><a href="#contacto">Contacto</a>
+      </div>
+      <a class="nav-cta" href="#contacto">Pedir presupuesto ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="wrap hero" id="inicio">
+      <div>
+        <div class="eyebrow">Diseño · Creatividad · Fabricación 3D</div>
+        <h1>Ideas que<br>toman <em>forma.</em></h1>
+        <p class="lead">Diseñamos y fabricamos en 3D objetos personalizados, piezas a medida y soluciones creativas para personas y negocios de Menorca.</p>
+        <div class="actions">
+          <a class="btn primary" href="#contacto">Cuéntanos tu idea ↗</a>
+          <a class="btn secondary" href="#servicios">Descubrir servicios</a>
+        </div>
+        <p class="hero-note">ESTUDIO LOCAL · MENORCA, ILLES BALEARS</p>
+      </div>
+      <div class="visual" aria-label="Ilustración geométrica inspirada en una pieza fabricada en 3D">
+        <div class="cube"><div class="top"></div><div class="left"></div><div class="right"></div></div>
+        <div class="visual-label">Del diseño al objeto real</div>
+      </div>
+    </section>
+
+    <section class="section light" id="servicios">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow" style="color:#587b2d">Qué hacemos</div><h2>Fabricamos lo que<br>imaginas.</h2></div>
+          <p>Unimos diseño digital e impresión 3D para crear piezas útiles, regalos especiales y productos con identidad propia.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="num">01 / DISEÑO</div><div class="icon">✳</div><h3>Diseño 3D a medida</h3><p>Convertimos una idea, un dibujo o una necesidad en un modelo 3D preparado para fabricar.</p></article>
+          <article class="card"><div class="num">02 / IMPRESIÓN</div><div class="icon">▧</div><h3>Impresión personalizada</h3><p>Fabricamos objetos en diferentes formas, tamaños y colores, adaptados a cada proyecto.</p></article>
+          <article class="card"><div class="num">03 / SOLUCIONES</div><div class="icon">⌁</div><h3>Piezas y prototipos</h3><p>Desarrollamos prototipos, soportes, organizadores y pequeñas piezas para resolver necesidades concretas.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="productos">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">Ideas para empezar</div><h2>Nuestras líneas<br>de creación.</h2></div>
+          <p>Podemos personalizar cada producto con nombres, medidas, colores o la imagen de tu negocio.</p>
+        </div>
+        <div class="product-grid">
+          <article class="product"><div class="product-art">⌂</div><h3>Menorca & souvenirs</h3><p>Recuerdos, imanes, llaveros y decoración inspirados en la isla.</p></article>
+          <article class="product"><div class="product-art">▤</div><h3>Para negocios</h3><p>Soportes QR, expositores, rótulos y elementos personalizados.</p></article>
+          <article class="product"><div class="product-art">⚙</div><h3>Piezas a medida</h3><p>Adaptadores, soportes, recambios no críticos y soluciones prácticas.</p></article>
+          <article class="product"><div class="product-art">✦</div><h3>Regalos únicos</h3><p>Detalles personalizados para celebraciones, equipos y ocasiones especiales.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap band-inner">
+        <h2>¿Tienes una idea, un diseño o una pieza que necesitas crear?</h2>
+        <a class="btn" href="#contacto">Hablemos de tu proyecto ↗</a>
+      </div>
+    </section>
+
+    <section class="section" id="proceso">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">Cómo trabajamos</div><h2>De la idea<br>a tus manos.</h2></div>
+          <p>Un proceso sencillo y cercano. Te acompañamos desde la primera conversación hasta la entrega.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><b>PASO 01</b><h3>Nos cuentas</h3><p>Explícanos qué necesitas o enséñanos una referencia.</p></div>
+          <div class="step"><b>PASO 02</b><h3>Diseñamos</h3><p>Preparamos una propuesta y definimos medidas y detalles.</p></div>
+          <div class="step"><b>PASO 03</b><h3>Fabricamos</h3><p>Imprimimos la pieza y revisamos su acabado.</p></div>
+          <div class="step"><b>PASO 04</b><h3>Entregamos</h3><p>Coordinamos contigo la recogida o entrega en Menorca.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section light" id="contacto">
+      <div class="wrap contact">
+        <div>
+          <div class="eyebrow" style="color:#587b2d">Contacto</div>
+          <h2>Tu próxima idea<br>empieza aquí.</h2>
+          <p style="color:#627078;max-width:480px">Cuéntanos qué tienes en mente. Estaremos encantados de valorar tu proyecto y preparar una propuesta.</p>
+        </div>
+        <div class="contact-box">
+          <h3 style="margin:0 0 8px">Hablemos de tu proyecto</h3>
+          <p>Estamos preparando nuestros canales de contacto. Añadiremos aquí vuestro WhatsApp, correo e Instagram cuando nos facilitéis los datos.</p>
+          <div class="contact-list">
+            <div class="contact-item"><strong>Ubicación</strong>Menorca · Illes Balears</div>
+            <div class="contact-item"><strong>WhatsApp</strong>Datos de contacto pendientes de añadir</div>
+            <div class="contact-item"><strong>Instagram</strong>@aj3dstudio2026 (por confirmar)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot"><span>© 2026 AJ3D STUDIO 2026 · Diseño e impresión 3D</span><span>Hecho en Menorca, con ideas que toman forma.</span></div>
+  </footer>
+</body>
+</html>
